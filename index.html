@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Placement Cell</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="popupModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p id="popupMessage"></p>
+            </div>
+        </div>
+
+        <h1>College Placement System</h1>
+
+        <!-- Student Login Form -->
+        <div id="student-login">
+            <h2>Student Login</h2>
+            <form id="studentLoginForm">
+                <input type="text" id="student-regno" placeholder="Register Number" required>
+                <input type="password" id="student-password" placeholder="Phone Number" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+        <!-- Admin Login Form -->
+        <div id="admin-login">
+            <h2>Admin Login</h2>
+            <form id="adminLoginForm">
+                <input type="text" id="admin-id" placeholder="Staff ID" required>
+                <input type="password" id="admin-password" placeholder="Phone Number" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+        <!-- Student Portal -->
+        <div id="student-portal" class="hidden">
+            <h2>Welcome Student</h2>
+            <p id="student-details"></p>
+            <button id="start-test">Start Skill Test</button>
+            <div id="test-section" class="hidden">
+                <h3>Skill Test</h3>
+                <ol id="questionList"></ol>
+                <button id="submitTest">Submit Test</button>
+            </div>
+        </div>
+
+        <!-- Admin Portal -->
+        <div id="admin-portal" class="hidden">
+            <h2>Welcome Admin</h2>
+            <button id="notifyInterviews">Notify Interviews</button>
+            <button id="generateQuestions">Generate Questions</button>
+            <button id="filterStudents">Filter Students</button>
+            <ul id="studentList"></ul>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
